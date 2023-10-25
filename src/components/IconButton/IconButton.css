@@ -1,0 +1,5 @@
+.icon-button {
+  background: url("../../../assets/talent-icons-sprite.png");
+  height: var(--icon-button-size);
+  width: var(--icon-button-size);
+}
