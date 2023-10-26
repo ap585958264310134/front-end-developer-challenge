@@ -1,5 +1,11 @@
 .icon-button {
   background: url("../../../assets/talent-icons-sprite.png");
+
   height: var(--icon-button-size);
   width: var(--icon-button-size);
+
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(#6eaedd, #6eaedd 55%, #1e3246 55%, #6eaedd) 1;
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
 }
