@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 import './IconButton.css';
 
 const ICON_SIZE = 50;
@@ -18,9 +18,7 @@ export default function IconButton(props: IconButtonProps) {
   } as React.CSSProperties;
 
   return (
-    <div className="icon-button" style={style}>
-      
-    </div>
+    <div className="icon-button" style={style}></div>
   );
 }
 

@@ -1,0 +1,12 @@
+.button-connector {
+  --button-connector--disabled-color: #2b2b2b;
+  --button-connector--disabled-border-color: color-mix(in srgb, var(--button-connector--disabled-color) 90%, white);
+  --button-connector--enabled-color: #2c2c2c; 
+  --button-connector--enabled-border-color: color-mix(in srgb, var(--button-connector--enabled-color) 90%, white);
+
+  border-width: 1px 0;
+  border-style: solid;
+
+  height: 14px;
+  width: 108px;
+}

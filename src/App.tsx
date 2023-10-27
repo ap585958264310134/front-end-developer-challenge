@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import IconButton from './components/IconButton/IconButton';
+import ButtonConnector from './components/ButtonConnector/ButtonConnector';
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
         <IconButton position={{
           x: 0,
           y: 0
+        }}/>
+        <ButtonConnector enabled={{
+          left: true,
+          right: false
         }}/>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
