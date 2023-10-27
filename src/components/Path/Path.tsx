@@ -1,6 +1,7 @@
 import './Path.css';
 import IconButton from "../IconButton/IconButton";
 import ButtonConnector from "../ButtonConnector/ButtonConnector";
+import SelectionProvider, { useSelectionDispatch, useSelectionState } from '../../contexts/SelectionContext';
 
 export interface ButtonDefinition {
   id: string;
@@ -8,17 +9,30 @@ export interface ButtonDefinition {
 }
 
 export interface PathProps {
-  buttonsDefinition: Array<ButtonDefinition>,
-  enabledButtons?: Array<string>;
-  possibilityToAdd?: boolean;
+  buttonsDefinition: Array<ButtonDefinition>;
 }
 
 export default function Path(props: PathProps) {
   const {
-    buttonsDefinition = [],
-    enabledButtons = [],
-    possibilityToAdd = true
+    buttonsDefinition = []
   } = props;
+
+  const state = useSelectionState();
+  const dispatcher = useSelectionDispatch();
+
+  if (!state || !dispatcher) {
+    return null;
+  }
+
+  const {
+    selected
+  } = state;
+
+  const onButtonClick = (id: string) => {
+    const value = !selected.includes(id);
+
+    dispatcher.setSelected(id, value);
+  }
 
   return (
     <div className="path">
@@ -29,9 +43,11 @@ export default function Path(props: PathProps) {
           <>
             <IconButton
               key={button.id}
+              id={button.id}
+              onClick={onButtonClick}
               position={{
                 x: button.iconPositionInFile,
-                y: enabledButtons.includes(button.id) ? 0 : 1
+                y: selected.includes(button.id) ? 0 : 1
               }}
             />
             {notLastButton && (
