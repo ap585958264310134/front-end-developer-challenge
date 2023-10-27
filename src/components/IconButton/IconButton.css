@@ -15,4 +15,6 @@
     var(--basic-border-color)
   ) 1;
   box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
+
+  z-index: 20;
 }
