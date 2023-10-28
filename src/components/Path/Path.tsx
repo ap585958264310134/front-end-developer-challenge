@@ -13,7 +13,10 @@ export interface PathProps {
 }
 
 export default function Path(props: PathProps) {
-  const { parsedButtonDefinitions } = usePath(props.buttonsDefinition); 
+  const { 
+    connectorStatuses,
+    parsedButtonDefinitions
+  } = usePath(props.buttonsDefinition); 
 
   return (
     <div className="path">
@@ -30,10 +33,7 @@ export default function Path(props: PathProps) {
               position={ button.position }
             />
             {!button.lastButton && (
-              <ButtonConnector enabled={{
-                left: true,
-                right: true
-              }} />
+              <ButtonConnector enabled={ connectorStatuses[i] } />
             )}
           </>
         );

@@ -21,7 +21,8 @@ interface ParsedButtonDefinition {
 }
 
 export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
-  parsedButtonDefinitions: Array<ParsedButtonDefinition>
+  parsedButtonDefinitions: Array<ParsedButtonDefinition>,
+  connectorStatuses: Array<boolean>
 } {
   const state = useSelectionState();
   const dispatcher = useSelectionDispatch();
@@ -58,7 +59,8 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
 
   if (!state || !dispatcher) {
     return {
-      parsedButtonDefinitions: []
+      parsedButtonDefinitions: [],
+      connectorStatuses: []
     };
   }
 
@@ -102,7 +104,22 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
     }
   });
 
+  const connectorStatuses = parsedButtonDefinitions.reduce((arr, button, i) => {
+    if (i === parsedButtonDefinitions.length - 1) {
+      return arr;
+    }
+
+    const buttonEnabled = selected.includes(button.id);
+    const nextButtonEnabled = selected.includes(parsedButtonDefinitions[i + 1].id);
+
+    return [
+      ...arr,
+      buttonEnabled || nextButtonEnabled
+    ];
+  }, [] as boolean[]);
+
   return {
-    parsedButtonDefinitions
+    parsedButtonDefinitions,
+    connectorStatuses
   };
 }

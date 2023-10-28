@@ -32,5 +32,9 @@
 
   &.clickable {
     cursor: pointer;
+
+    &:hover {
+      background-position-y: var(--icon-hover-background-position-y) !important;
+    }
   }
 }
