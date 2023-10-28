@@ -1,0 +1,13 @@
+.talent-path {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & .title {
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 140px;
+  }
+}

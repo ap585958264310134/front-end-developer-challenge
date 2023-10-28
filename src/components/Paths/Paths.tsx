@@ -1,5 +1,6 @@
 import SelectionProvider from "../../contexts/SelectionContext";
 import Path, { type ButtonDefinition } from "../Path/Path";
+import TalentPath from "../TalentPath/TalentPath";
 
 /* If icon will have "real" ids it could be replaced. */
 function generateButtonsData(start: number, end: number = 0): Array<ButtonDefinition> {
@@ -17,12 +18,16 @@ export default function Paths() {
   return (
       <div className="paths">
         <SelectionProvider>
-          <Path
-            buttonsDefinition={generateButtonsData(0, 4)}
-          />
-          <Path
-            buttonsDefinition={generateButtonsData(4, 8)}
-          />
+          <TalentPath title="Talent path 1">
+            <Path
+              buttonsDefinition={generateButtonsData(0, 4)}
+            />
+          </TalentPath>
+          <TalentPath title="Talent path 2">
+            <Path
+              buttonsDefinition={generateButtonsData(4, 8)}
+            />
+          </TalentPath>
         </SelectionProvider>
       </div>
   )
