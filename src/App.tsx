@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
 import Paths from './components/Paths/Paths';
+import CalculatorContainer from './components/CalculatorContainer/CalculatorContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">        
-        <Paths />
-      </header>
-    </div>
+    <CalculatorContainer>
+      <Paths />
+    </CalculatorContainer>
   );
 }
 

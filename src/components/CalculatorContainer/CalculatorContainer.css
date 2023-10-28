@@ -1,0 +1,8 @@
+.calculator-container {
+  background-image: url("../../../assets/talent-calc-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 427px;
+  width: 1125px;
+}
