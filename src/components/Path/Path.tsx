@@ -1,5 +1,5 @@
 import './Path.css';
-import IconButton from "../IconButton/IconButton";
+import IconButton, { IconButtonBorder } from "../IconButton/IconButton";
 import ButtonConnector from "../ButtonConnector/ButtonConnector";
 import SelectionProvider, { useSelectionDispatch, useSelectionState } from '../../contexts/SelectionContext';
 
@@ -44,6 +44,7 @@ export default function Path(props: PathProps) {
             <IconButton
               key={button.id}
               id={button.id}
+              borderType={selected.includes(button.id) ? IconButtonBorder.Light : IconButtonBorder.Dark}
               onClick={onButtonClick}
               position={{
                 x: button.iconPositionInFile,
