@@ -1,4 +1,7 @@
 .counter {
+  --counter-font-size: 20px;
+
   color: white;
-  font-size: 20px;
+  font-size: var(--counter-font-size);
+  line-height: var(--counter-font-size);
 }
