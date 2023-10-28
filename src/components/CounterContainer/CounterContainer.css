@@ -1,0 +1,12 @@
+.counter-container {
+  height: 100px;
+  width: 200px;
+
+  background-color: #07090A;
+
+  & .description {
+    color: #46617f;
+    font-size: 22px;
+    font-weight: 200;
+  }
+}

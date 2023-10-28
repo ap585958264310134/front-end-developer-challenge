@@ -1,4 +1,4 @@
-import SelectionProvider from "../../contexts/SelectionContext";
+import SelectionProvider from "../../contexts/SelectionContextProvider";
 import Path, { type ButtonDefinition } from "../Path/Path";
 import TalentPath from "../TalentPath/TalentPath";
 
@@ -16,19 +16,17 @@ function generateButtonsData(start: number, end: number = 0): Array<ButtonDefini
 
 export default function Paths() {
   return (
-      <div className="paths">
-        <SelectionProvider>
-          <TalentPath title="Talent path 1">
-            <Path
-              buttonsDefinition={generateButtonsData(0, 4)}
-            />
-          </TalentPath>
-          <TalentPath title="Talent path 2">
-            <Path
-              buttonsDefinition={generateButtonsData(4, 8)}
-            />
-          </TalentPath>
-        </SelectionProvider>
-      </div>
+    <div className="paths">
+        <TalentPath title="Talent path 1">
+          <Path
+            buttonsDefinition={generateButtonsData(0, 4)}
+          />
+        </TalentPath>
+        <TalentPath title="Talent path 2">
+          <Path
+            buttonsDefinition={generateButtonsData(4, 8)}
+          />
+        </TalentPath>
+    </div>
   )
 }

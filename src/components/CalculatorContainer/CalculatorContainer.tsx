@@ -1,3 +1,4 @@
+import SelectionProvider from '../../contexts/SelectionContextProvider';
 import './CalculatorContainer.css';
 
 interface CalculatorContainerProps {
@@ -9,7 +10,9 @@ export default function CalculatorContainer({
 }: CalculatorContainerProps) {
   return (
     <div className="calculator-container">
-      { children }
+      <SelectionProvider>
+        { children }
+      </SelectionProvider>
     </div>
   )
 }

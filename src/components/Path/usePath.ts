@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useMemo } from "react";
-import { useSelectionDispatch, useSelectionState } from "../../contexts/SelectionContext";
+import { useSelectionDispatch, useSelectionState } from "../../contexts/SelectionContextProvider";
 import { IconButtonBorder } from "../IconButton/IconButton";
 import type { ButtonDefinition } from "./Path";
 
