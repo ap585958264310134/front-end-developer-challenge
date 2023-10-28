@@ -1,7 +1,7 @@
 import './CalculatorContainer.css';
 
 interface CalculatorContainerProps {
-  children: React.ReactElement;
+  children: React.ReactElement | Array<React.ReactElement>;
 }
 
 export default function CalculatorContainer({
