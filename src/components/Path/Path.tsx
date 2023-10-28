@@ -24,7 +24,9 @@ export default function Path(props: PathProps) {
               key={ button.id }
               id={ button.id }
               borderType={ button.borderType }
+              clickable={ button.clickable }
               onClick={ button.onClick }
+              onRightClick={ button.onRightClick }
               position={ button.position }
             />
             {!button.lastButton && (

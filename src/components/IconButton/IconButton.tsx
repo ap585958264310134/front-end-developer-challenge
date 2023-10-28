@@ -11,18 +11,22 @@ export enum IconButtonBorder {
 
 interface IconButtonProps {
   id: string;
+  clickable: boolean;
   position: {
     x: number;
     y: number;
   },
   borderType: IconButtonBorder;
   onClick: (id: string) => void;
+  onRightClick: (id: string) => void;
 }
 
 export default function IconButton({
   id,
   borderType,
+  clickable,
   onClick,
+  onRightClick,
   position
 }: IconButtonProps) {
   const style = {
@@ -33,17 +37,25 @@ export default function IconButton({
 
   const classNames = [
     'icon-button',
-    borderType
+    borderType,
+    clickable && 'clickable'
   ].join(' ');
 
   const onClickHandler = useCallback(() => {
     onClick(id);
   }, [id, onClick]);
 
+  const onRightClickHandler = useCallback((ev: React.MouseEvent<HTMLElement>) => {
+    ev.preventDefault();
+
+    onRightClick(id);
+  }, [id, onRightClick]);
+
   return (
     <div 
       className={ classNames }
       onClick={ onClickHandler }
+      onContextMenu={ onRightClickHandler }
       style={style}
     />
   );

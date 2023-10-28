@@ -16,6 +16,8 @@
 
   z-index: 20;
 
+  cursor: not-allowed;
+
   &.border-light {
     --breaking-point: 55%;
     --breaking-color: #1e3246;
@@ -26,5 +28,9 @@
     --breaking-point: 45%;
     --breaking-color: #3b3b3b;
     --border-color: #4e4e4e;
+  }
+
+  &.clickable {
+    cursor: pointer;
   }
 }
