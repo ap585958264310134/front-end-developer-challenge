@@ -1,4 +1,4 @@
-import SelectionProvider from "../../contexts/SelectionContextProvider";
+import './Paths.css';
 import Path, { type ButtonDefinition } from "../Path/Path";
 import TalentPath from "../TalentPath/TalentPath";
 

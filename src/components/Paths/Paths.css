@@ -1,0 +1,10 @@
+.paths {
+  grid-row-start: paths;
+  grid-row-end: paths;
+  grid-column-start: paths;
+  grid-column-end: paths;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

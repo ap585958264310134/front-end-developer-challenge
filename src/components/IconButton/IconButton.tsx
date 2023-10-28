@@ -30,7 +30,7 @@ export default function IconButton({
   position
 }: IconButtonProps) {
   const style = {
-    "--icon-button-size": `${ ICON_SIZE }px`,
+    "--icon-button-size": ICON_SIZE,
     "--icon-hover-background-position-y": ICON_SIZE * -1,
     backgroundPositionX: position.x * ICON_SIZE * -1,
     backgroundPositionY: position.y * ICON_SIZE * -1

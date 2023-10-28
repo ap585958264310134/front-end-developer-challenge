@@ -12,6 +12,11 @@
 
   border: 1px #aaaaaa10 solid;
 
+  grid-row-start: counter;
+  grid-row-end: counter;
+  grid-column-start: counter;
+  grid-column-end: counter;
+
   & .description {
     --counter-container-description-font-size: 22px;
 

@@ -1,8 +1,19 @@
 .calculator-container {
+  display: grid;
+  grid-template-rows: 55px 1fr;
+  grid-template-columns: 75% 25%;
+  grid-template-areas:
+    "title title"
+    "paths counter";
+  justify-items: center;
+  align-items: center;
+
   background-image: url("../../../assets/talent-calc-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 427px;
-  width: 1125px;
+  height: 350px;
+  width: 1000px;
+
+  padding: 30px;
 }

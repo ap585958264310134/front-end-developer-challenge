@@ -5,5 +5,14 @@ h1 {
   font-weight: 400;
   font-size: 24px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-row-start: title;
+  grid-row-end: title;
+  grid-column-start: title;
+  grid-column-end: title;
+
   padding: 12px;
 }
