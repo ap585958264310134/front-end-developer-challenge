@@ -5,8 +5,8 @@
   justify-content: center;
   gap: 8px;
 
-  height: 100px;
-  width: 200px;
+  height: 75px;
+  width: 150px;
 
   background-color: #07090A;
 
@@ -22,7 +22,7 @@
 
     color: #46617f;
     font-size: var(--counter-container-description-font-size);
-    font-weight: 200;
+    font-weight: 300;
     line-height: var(--counter-container-description-font-size);
   }
 }

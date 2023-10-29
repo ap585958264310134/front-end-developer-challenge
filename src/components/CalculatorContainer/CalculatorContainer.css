@@ -5,6 +5,7 @@
   grid-template-areas:
     "title title"
     "paths counter";
+  row-gap: 20px;
   justify-items: center;
   align-items: center;
 
@@ -12,8 +13,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 350px;
-  width: 1000px;
+  box-sizing: border-box;
+  height: var(--application-height);
+  width: var(--application-width);
 
   padding: 30px;
+
+  border: 1px #aaaaaa10 solid;
 }
