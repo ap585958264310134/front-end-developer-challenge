@@ -20,6 +20,10 @@ interface ParsedButtonDefinition {
   }
 }
 
+function isSelected(selected: string[], id: string):boolean {
+  return selected.includes(id);
+}
+
 export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
   parsedButtonDefinitions: Array<ParsedButtonDefinition>,
   connectorStatuses: Array<boolean>
@@ -36,7 +40,7 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
       selected
     } = state;
 
-    const value = !selected.includes(id);
+    const value = !isSelected(selected, id);
 
     if (value !== allowedValue) {
       return;
@@ -56,7 +60,6 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
     return state.selected.length < state.maxSelected;
   }, [state]);
 
-
   if (!state || !dispatcher) {
     return {
       parsedButtonDefinitions: [],
@@ -68,13 +71,15 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
     selected,
   } = state;
 
+  const isSelectedWithData = isSelected.bind(null, selected);
+
   const buttonsClickAvailability = buttonsDefinition.map((buttonDefintion, i) => {
-    const enabled = selected.includes(buttonDefintion.id);
+    const enabled = isSelectedWithData(buttonDefintion.id);
     const nextButtonEnabled = i < buttonsDefinition.length - 1 ?
-      state.selected.includes(buttonsDefinition[i + 1].id) :
+      isSelectedWithData(buttonsDefinition[i + 1].id) :
       false;
     const previousButtonEnabled = i > 0 ?
-      state.selected.includes(buttonsDefinition[i - 1].id) :
+      isSelectedWithData(buttonsDefinition[i - 1].id) :
       true;
 
     return {
@@ -84,7 +89,7 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
   });
 
   const parsedButtonDefinitions: Array<ParsedButtonDefinition> = buttonsDefinition.map((buttonDefintion, i) => {
-    const enabled = selected.includes(buttonDefintion.id);
+    const enabled = isSelectedWithData(buttonDefintion.id);
 
     const buttonClickAvailability = buttonsClickAvailability[i];
 
@@ -109,8 +114,8 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
       return arr;
     }
 
-    const buttonEnabled = selected.includes(button.id);
-    const nextButtonEnabled = selected.includes(parsedButtonDefinitions[i + 1].id);
+    const buttonEnabled = isSelectedWithData(button.id);
+    const nextButtonEnabled = isSelectedWithData(parsedButtonDefinitions[i + 1].id);
 
     return [
       ...arr,
