@@ -2,7 +2,14 @@
 
 ## Developer remarks
 
-- This application is hosted on github pages => **[Link](https://ap585958264310134.github.io/front-end-developer-challenge/)**
+- This application is hosted on Github Pages => **[Link](https://ap585958264310134.github.io/front-end-developer-challenge/)**
+- Unfortunately I couldn't be 100% pixel perfect, because:
+    - The attached icons have a size of 50px x 50px, but the mock-up "defines" their size as 58px x 58px. The icons were delivered in a PNG file, which means that changing their size in this manner will degrade their quality and make them look unattractive. Therefore, I have decided to stick to their original size, even though not every pixel measurement will match the mock-up. I believe this is the better solution.
+    - The mock-up was delivered in PNG file, which means that it was hard to collect original colors, font, font sizes, widths, heights etc.
+- In my opinion, there is an error in the mock-up. The cursor pointer shoudn't be available when hovering over the 'cake' icon in this situation, as you cannot select it without first selecting cutlery.
+- I have tested this application on:
+    - (desktop) Chrome 118
+    - (mobile) Chrome 118, Android 13
 
 
 ## Information from template 
