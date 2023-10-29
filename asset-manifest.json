@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/front-end-developer-challenge/static/css/main.4b1bf09e.css",
+    "main.js": "/front-end-developer-challenge/static/js/main.50d83cb8.js",
+    "static/js/787.29c18fe7.chunk.js": "/front-end-developer-challenge/static/js/787.29c18fe7.chunk.js",
+    "static/media/talent-calc-bg.png": "/front-end-developer-challenge/static/media/talent-calc-bg.ff62db082d3d2aef3655.png",
+    "static/media/talent-icons-sprite.png": "/front-end-developer-challenge/static/media/talent-icons-sprite.49f68f2a62aad2d3d688.png",
+    "index.html": "/front-end-developer-challenge/index.html",
+    "main.4b1bf09e.css.map": "/front-end-developer-challenge/static/css/main.4b1bf09e.css.map",
+    "main.50d83cb8.js.map": "/front-end-developer-challenge/static/js/main.50d83cb8.js.map",
+    "787.29c18fe7.chunk.js.map": "/front-end-developer-challenge/static/js/787.29c18fe7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b1bf09e.css",
+    "static/js/main.50d83cb8.js"
+  ]
+}
