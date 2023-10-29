@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/front-end-developer-challenge/static/css/main.ae1a36c0.css",
-    "main.js": "/front-end-developer-challenge/static/js/main.570101cd.js",
+    "main.js": "/front-end-developer-challenge/static/js/main.d01919ee.js",
     "static/js/787.29c18fe7.chunk.js": "/front-end-developer-challenge/static/js/787.29c18fe7.chunk.js",
     "static/media/talent-calc-bg.png": "/front-end-developer-challenge/static/media/talent-calc-bg.ff62db082d3d2aef3655.png",
     "static/media/Roboto-Medium.ttf": "/front-end-developer-challenge/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
@@ -10,11 +10,11 @@
     "static/media/talent-icons-sprite.png": "/front-end-developer-challenge/static/media/talent-icons-sprite.49f68f2a62aad2d3d688.png",
     "index.html": "/front-end-developer-challenge/index.html",
     "main.ae1a36c0.css.map": "/front-end-developer-challenge/static/css/main.ae1a36c0.css.map",
-    "main.570101cd.js.map": "/front-end-developer-challenge/static/js/main.570101cd.js.map",
+    "main.d01919ee.js.map": "/front-end-developer-challenge/static/js/main.d01919ee.js.map",
     "787.29c18fe7.chunk.js.map": "/front-end-developer-challenge/static/js/787.29c18fe7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae1a36c0.css",
-    "static/js/main.570101cd.js"
+    "static/js/main.d01919ee.js"
   ]
 }
