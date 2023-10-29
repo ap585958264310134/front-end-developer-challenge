@@ -22,13 +22,37 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --fix --ext .ts,.tsx"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "always"
+      ],
+      "sort-imports": [
+        "error"
+      ],
+      "react/react-in-jsx-scope": [
+        "off"
+      ],
+      "react/jsx-curly-spacing": [
+        "error",
+        {
+          "when": "always",
+          "spacing": {
+            "objectLiterals": "never"
+          }
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -43,6 +67,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-plugin-react": "^7.33.2",
     "gh-pages": "^6.0.0"
   }
 }

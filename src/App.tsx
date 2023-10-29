@@ -1,9 +1,8 @@
-import React from 'react';
 import './App.css';
-import Paths from './components/Paths/Paths';
 import CalculatorContainer from './components/CalculatorContainer/CalculatorContainer';
-import Title from './components/Title/Title';
 import CounterContainer from './components/CounterContainer/CounterContainer';
+import Paths from './components/Paths/Paths';
+import Title from './components/Title/Title';
 
 function App() {
   return (

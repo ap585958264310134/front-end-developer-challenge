@@ -1,6 +1,6 @@
 import './Path.css';
-import IconButton from "components/IconButton/IconButton";
 import ButtonConnector from "components/ButtonConnector/ButtonConnector";
+import IconButton from "components/IconButton/IconButton";
 import { usePath } from './usePath';
 
 export interface ButtonDefinition {

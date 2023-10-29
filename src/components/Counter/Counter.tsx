@@ -1,5 +1,5 @@
-import { useSelectionState } from 'contexts/SelectionContextProvider';
 import './Counter.css';
+import { useSelectionState } from 'contexts/SelectionContextProvider';
 
 export default function Counter(){
   const state = useSelectionState();
@@ -17,5 +17,5 @@ export default function Counter(){
 
   return (
     <div className="counter">{ selectedNo } / { maxSelected }</div>
-  )
+  );
 }

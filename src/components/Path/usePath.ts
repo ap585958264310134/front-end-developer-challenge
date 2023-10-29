@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useMemo } from "react";
 import { useSelectionDispatch, useSelectionState } from "contexts/SelectionContextProvider";
-import { IconButtonBorder } from "components/IconButton/IconButton";
 import type { ButtonDefinition } from "./Path";
+import { IconButtonBorder } from "components/IconButton/IconButton";
 
 const SPRINT_ROW_ENABLED = 0;
 const SPRINT_ROW_DISABLED = 1;
@@ -47,7 +47,7 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
     }
 
     dispatcher.setSelected(id, value);
-  }
+  };
 
   const onClick = useCallback(clickHandler.bind(null, true), [state, dispatcher]);
   const onRightClick = useCallback(clickHandler.bind(null, false), [state, dispatcher]);
@@ -85,7 +85,7 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
     return {
       click: !enabled && previousButtonEnabled && limitAvailable,
       rightClick: enabled && !nextButtonEnabled,
-    }
+    };
   });
 
   const parsedButtonDefinitions: Array<ParsedButtonDefinition> = buttonsDefinition.map((buttonDefintion, i) => {
@@ -106,7 +106,7 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
         x: buttonDefintion.iconPositionInFile,
         y: enabled ? SPRINT_ROW_ENABLED : SPRINT_ROW_DISABLED
       },
-    }
+    };
   });
 
   const connectorStatuses = parsedButtonDefinitions.reduce((arr, button, i) => {

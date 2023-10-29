@@ -7,5 +7,5 @@ export default function CounterContainer() {
       <Counter />
       <div className="description">Points Spent</div>
     </div>
-  )
+  );
 }

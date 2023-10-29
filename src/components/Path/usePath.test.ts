@@ -1,7 +1,6 @@
-import { renderHook, waitFor } from '@testing-library/react';
-
-import { usePath } from './usePath';
 import { useSelectionDispatch, useSelectionState } from "contexts/SelectionContextProvider";
+import { renderHook } from '@testing-library/react';
+import { usePath } from './usePath';
 
 jest.mock('contexts/SelectionContextProvider', () => {
   return {
@@ -21,12 +20,12 @@ describe('usePath', () => {
   const setUseSelectionState = (value: NonNullable<ReturnType<typeof useSelectionState>>) => {
     (useSelectionState as jest.MockedFunction<typeof useSelectionState>)
       .mockReturnValue(value);
-  }
+  };
 
   beforeEach(() => {
     (useSelectionDispatch as jest.MockedFunction<typeof useSelectionDispatch>).mockReturnValue({
       setSelected: jest.fn()
-    })
+    });
   });
 
   it('should return initial state', async () => {
@@ -71,7 +70,7 @@ describe('usePath', () => {
     setUseSelectionState({
       maxSelected: 6,
       selected: ['icon0', 'icon1']
-    })
+    });
 
     /* Act */
     const {
@@ -115,7 +114,7 @@ describe('usePath', () => {
     setUseSelectionState({
       maxSelected: 2,
       selected: ['icon0', 'icon1']
-    })
+    });
 
     /* Act */
     const {
@@ -125,5 +124,5 @@ describe('usePath', () => {
     /* Assert */
     const clickableMap = result.current.parsedButtonDefinitions.map(button => button.clickable);
     expect(clickableMap).toEqual([false, true, false, false]);
-  })
+  });
 });

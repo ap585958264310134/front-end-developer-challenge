@@ -1,5 +1,5 @@
-import type React from 'react';
 import './IconButton.css';
+import type React from 'react';
 import { useCallback } from 'react';
 
 const ICON_SIZE = 50;
@@ -57,7 +57,7 @@ export default function IconButton({
       className={ classNames }
       onClick={ onClickHandler }
       onContextMenu={ onRightClickHandler }
-      style={style}
+      style={ style }
     />
   );
 }

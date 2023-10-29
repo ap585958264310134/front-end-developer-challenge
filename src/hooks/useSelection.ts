@@ -34,10 +34,10 @@ export function useSelection() {
       ...selection,
       selected: newSelection
     });
-  }
+  };
 
   return {
     selection,
     setSelected
-  }
+  };
 }

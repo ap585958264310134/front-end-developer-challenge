@@ -11,5 +11,5 @@ export default function Title({
     <h1>
       { text }
     </h1>
-  )
+  );
 }
