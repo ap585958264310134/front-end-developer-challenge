@@ -31,7 +31,7 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
   const state = useSelectionState();
   const dispatcher = useSelectionDispatch();
 
-  const clickHandler = (allowedValue: boolean, id: string) => {
+  const clickHandler = useCallback((allowedValue: boolean, id: string) => {
     if (!state || !dispatcher) {
       return;
     }
@@ -47,7 +47,7 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
     }
 
     dispatcher.setSelected(id, value);
-  };
+  }, [state, dispatcher]);
 
   const onClick = useCallback(clickHandler.bind(null, true), [state, dispatcher]);
   const onRightClick = useCallback(clickHandler.bind(null, false), [state, dispatcher]);

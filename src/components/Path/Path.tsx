@@ -1,6 +1,7 @@
 import './Path.css';
 import ButtonConnector from "components/ButtonConnector/ButtonConnector";
 import IconButton from "components/IconButton/IconButton";
+import React from 'react';
 import { usePath } from './usePath';
 
 export interface ButtonDefinition {
@@ -22,7 +23,7 @@ export default function Path(props: PathProps) {
     <div className="path">
       { parsedButtonDefinitions.map((button, i) => {
         return (
-          <>
+          <React.Fragment key={ `iconButtonFragment${ i }` }>
             <IconButton
               key={ button.id }
               id={ button.id }
@@ -33,9 +34,9 @@ export default function Path(props: PathProps) {
               position={ button.position }
             />
             {!button.lastButton && (
-              <ButtonConnector enabled={ connectorStatuses[i] } />
+              <ButtonConnector key={ `connector${ i }` } enabled={ connectorStatuses[i] } />
             )}
-          </>
+          </React.Fragment>
         );
       }) }
     </div>

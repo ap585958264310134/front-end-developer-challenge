@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export interface Selection {
   selected: Array<string>;
@@ -17,7 +17,7 @@ export function useSelection() {
     maxSelected: MAX_SELECTED
   });
 
-  const setSelected: SelectionDispatch["setSelected"] = (id: string, value: boolean): void => {
+  const setSelected: SelectionDispatch["setSelected"] = useCallback((id: string, value: boolean): void => {
     let newSelection = selection.selected;
 
     if (value) {
@@ -34,7 +34,7 @@ export function useSelection() {
       ...selection,
       selected: newSelection
     });
-  };
+  }, [selection, setSelection]);
 
   return {
     selection,
