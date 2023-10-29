@@ -1,4 +1,4 @@
-import { useSelectionState } from '../../contexts/SelectionContextProvider';
+import { useSelectionState } from 'contexts/SelectionContextProvider';
 import './Counter.css';
 
 export default function Counter(){

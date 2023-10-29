@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useMemo } from "react";
-import { useSelectionDispatch, useSelectionState } from "../../contexts/SelectionContextProvider";
-import { IconButtonBorder } from "../IconButton/IconButton";
+import { useSelectionDispatch, useSelectionState } from "contexts/SelectionContextProvider";
+import { IconButtonBorder } from "components/IconButton/IconButton";
 import type { ButtonDefinition } from "./Path";
 
 const SPRINT_ROW_ENABLED = 0;

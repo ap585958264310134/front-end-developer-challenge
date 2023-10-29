@@ -1,4 +1,4 @@
-import SelectionProvider from '../../contexts/SelectionContextProvider';
+import SelectionProvider from 'contexts/SelectionContextProvider';
 import './CalculatorContainer.css';
 
 interface CalculatorContainerProps {

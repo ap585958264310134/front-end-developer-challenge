@@ -1,6 +1,6 @@
 import './Paths.css';
-import Path, { type ButtonDefinition } from "../Path/Path";
-import TalentPath from "../TalentPath/TalentPath";
+import Path, { type ButtonDefinition } from "components/Path/Path";
+import TalentPath from "components/TalentPath/TalentPath";
 
 /* If icon will have "real" ids it could be replaced. */
 function generateButtonsData(start: number, end: number = 0): Array<ButtonDefinition> {
