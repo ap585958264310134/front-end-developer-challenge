@@ -116,10 +116,11 @@ export function usePath(buttonsDefinition: Array<ButtonDefinition>): {
 
     const buttonEnabled = isSelectedWithData(button.id);
     const nextButtonEnabled = isSelectedWithData(parsedButtonDefinitions[i + 1].id);
+    const nextButtonClickable = parsedButtonDefinitions[i + 1].clickable;
 
     return [
       ...arr,
-      buttonEnabled || nextButtonEnabled
+      (buttonEnabled && nextButtonEnabled) || nextButtonClickable
     ];
   }, [] as boolean[]);
 

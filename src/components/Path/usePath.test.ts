@@ -122,7 +122,14 @@ describe('usePath', () => {
     } = renderHook(() => usePath(buttonsDefinition));
 
     /* Assert */
-    const clickableMap = result.current.parsedButtonDefinitions.map(button => button.clickable);
+    const {
+      connectorStatuses,
+      parsedButtonDefinitions
+    } = result.current;
+
+    expect(connectorStatuses).toEqual([true, false, false]);
+
+    const clickableMap = parsedButtonDefinitions.map(button => button.clickable);
     expect(clickableMap).toEqual([false, true, false, false]);
   });
 });
