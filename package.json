@@ -24,7 +24,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "eslint src --fix --ext .ts,.tsx"
+    "lint:fix": "eslint src --fix --ext .ts,.tsx",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +69,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^13.3.3",
     "eslint-plugin-react": "^7.33.2",
     "gh-pages": "^6.0.0"
   }

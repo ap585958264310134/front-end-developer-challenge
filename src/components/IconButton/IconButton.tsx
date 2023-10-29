@@ -53,7 +53,8 @@ export default function IconButton({
   }, [id, onRightClick]);
 
   return (
-    <div 
+    <div
+      id={ id }
       className={ classNames }
       onClick={ onClickHandler }
       onContextMenu={ onRightClickHandler }

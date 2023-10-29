@@ -16,6 +16,9 @@ export default function Counter(){
   const selectedNo = selected.length;
 
   return (
-    <div className="counter">{ selectedNo } / { maxSelected }</div>
+    <div
+      className="counter"
+      data-cy="counter"
+    >{ selectedNo } / { maxSelected }</div>
   );
 }
